@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz HTML Sederhana</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    .question { margin-bottom: 20px; }
+    .result { font-weight: bold; margin-top: 20px; }
+    button { padding: 8px 16px; margin-top: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Quiz Sederhana</h1>
+
+  <form id="quizForm">
+    <div class="question">
+      <p>1. Siapa pencipta bahasa pemrograman JavaScript?</p>
+      <label><input type="radio" name="q1" value="a"> Bill Gates</label><br>
+      <label><input type="radio" name="q1" value="b"> Brendan Eich</label><br>
+      <label><input type="radio" name="q1" value="c"> Elon Musk</label>
+    </div>
+
+    <div class="question">
+      <p>2. HTML singkatan dari?</p>
+      <label><input type="radio" name="q2" value="a"> Hyper Text Markup Language</label><br>
+      <label><input type="radio" name="q2" value="b"> High Tech Machine Learning</label><br>
+      <label><input type="radio" name="q2" value="c"> Hyperlinks and Text Management Language</label>
+    </div>
+
+    <div class="question">
+      <p>3. Tag untuk membuat link di HTML?</p>
+      <label><input type="radio" name="q3" value="a"> &lt;link&gt;</label><br>
+      <label><input type="radio" name="q3" value="b"> &lt;a&gt;</label><br>
+      <label><input type="radio" name="q3" value="c"> &lt;href&gt;</label>
+    </div>
+
+    <button type="button" onclick="checkAnswers()">Kirim Jawaban</button>
+  </form>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    

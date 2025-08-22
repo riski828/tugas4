@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>URL Encode / Decode</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    textarea { width: 100%; height: 80px; margin-bottom: 10px; }
+    button { padding: 8px 16px; margin: 5px; cursor: pointer; }
+    .result { margin-top: 15px; padding: 10px; background: #f4f4f4; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>🔑 URL Encoder & Decoder</h1>
+
+  <textarea id="input" placeholder="Tulis teks di sini..."></textarea><br>
+
+  <button onclick="encodeURL()">Encode</button>
+  <button onclick="decodeURL()">Decode</button>
+
+  <div class="result" id="output"></div>
+
+  <script>
+    function encodeURL() {
+      const text = document.getElementById("input").value;
+      document.getElementById("output").textContent = encodeURIComponent(text);
+    }
+    function decodeURL() {
+      const text = document.getElementById("input").value;
+      document.getElementById("output").textContent = decodeURIComponent(text);
+    }
+  </script>
+</body>
+</html>
